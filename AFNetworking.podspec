@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-  s.name     = 'AFNetworking'
+  s.name     = 'AFNetworking2.0'
   s.version  = '2.5.1'
   s.license  = 'MIT'
   s.summary  = 'A delightful iOS and OS X networking framework.'
-  s.homepage = 'https://github.com/AFNetworking/AFNetworking'
+  s.homepage = 'https://github.com/markevich1/AFNetworking2.0'
   s.social_media_url = 'https://twitter.com/AFNetworking'
   s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source   = { :git => 'https://github.com/AFNetworking/AFNetworking.git', :tag => s.version, :submodules => true }
+  s.source   = { :git => 'https://github.com/markevich1/AFNetworking2.0.git', :tag => s.version, :submodules => true }
   s.requires_arc = true
 
   s.ios.deployment_target = '6.0'
@@ -32,17 +32,17 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'NSURLConnection' do |ss|
-    ss.dependency 'AFNetworking/Serialization'
-    ss.dependency 'AFNetworking/Reachability'
-    ss.dependency 'AFNetworking/Security'
+    ss.dependency 'AFNetworking2.0/Serialization'
+    ss.dependency 'AFNetworking2.0/Reachability'
+    ss.dependency 'AFNetworking2.0/Security'
 
     ss.source_files = 'AFNetworking/AFURLConnectionOperation.{h,m}', 'AFNetworking/AFHTTPRequestOperation.{h,m}', 'AFNetworking/AFHTTPRequestOperationManager.{h,m}'
   end
 
   s.subspec 'NSURLSession' do |ss|
-    ss.dependency 'AFNetworking/Serialization'
-    ss.dependency 'AFNetworking/Reachability'
-    ss.dependency 'AFNetworking/Security'
+    ss.dependency 'AFNetworking2.0/Serialization'
+    ss.dependency 'AFNetworking2.0/Reachability'
+    ss.dependency 'AFNetworking2.0/Security'
 
     ss.source_files = 'AFNetworking/AFURLSessionManager.{h,m}', 'AFNetworking/AFHTTPSessionManager.{h,m}'
   end
@@ -50,8 +50,8 @@ Pod::Spec.new do |s|
   s.subspec 'UIKit' do |ss|
     ss.ios.deployment_target = '6.0'
 
-    ss.dependency 'AFNetworking/NSURLConnection'
-    ss.dependency 'AFNetworking/NSURLSession'
+    ss.dependency 'AFNetworking2.0/NSURLConnection'
+    ss.dependency 'AFNetworking2.0/NSURLSession'
 
     ss.ios.public_header_files = 'UIKit+AFNetworking/*.h'
     ss.ios.source_files = 'UIKit+AFNetworking'
